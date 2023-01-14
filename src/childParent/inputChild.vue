@@ -1,18 +1,18 @@
 <template>
   <div class="cont">
     <hr />
-    <p>inputChild : modelValue : {{ modelValue }}</p>
-    <input type="text" :value="modelValue" @input="fn" />
+    <p>inputChild : value : {{ value }}</p>
+    <input type="text" :value="value" @input="fn" />
   </div>
 </template>
 <script>
 /* eslint-disable */
 export default {
-  props: ['modelValue'],
+  props: ["value"],
   methods: {
     fn(e) {
-      this.$emit('update:modelValue', e.target.value)
-    }
-  }
+      this.$emit("input", e.target.value)
+    },
+  },
 }
 </script>
