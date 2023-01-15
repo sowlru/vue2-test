@@ -1,6 +1,6 @@
 <template>
   <div class="cont">
-    <p>elselectChild : value : {{ value }}</p>
+    <p>elselectChild : v-model : {{ value }}</p>
     <el-select v-model="vm" placeholder="Select" @change="handlerChange">
       <el-option
         v-for="item in options"
