@@ -2,6 +2,7 @@
   <div class="cont">
     <p>elselectParent : myData : {{ myData }}</p>
     <elselect-child v-model="myData" />
+    <hr />
   </div>
 </template>
 <script>
@@ -13,7 +14,7 @@ export default {
   },
   data() {
     return {
-      myData: "a",
+      myData: "",
     }
   },
 }

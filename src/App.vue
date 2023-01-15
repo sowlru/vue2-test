@@ -2,7 +2,6 @@
   <div id="app">
     <elselect-parent />
     <!-- <input-parent /> -->
-    <!-- <el-button>I am ElButton</el-button> -->
   </div>
 </template>
 
