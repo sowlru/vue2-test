@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div id="app">
     <elselect-parent />
     <!-- <input-parent /> -->
     <!-- <el-button>I am ElButton</el-button> -->
@@ -7,23 +7,32 @@
 </template>
 
 <script>
-// import { ElButton } from "element-plus"
 /* eslint-disable */
 // CHILD-PARENT
 import elselectParent from "@/childParent/elselectParent"
 import inputParent from "@/childParent/inputParent"
-
 export default {
+  name: "app",
   components: {
     elselectParent,
     inputParent,
-    // ElButton,
   },
 }
 </script>
 
 <style>
-.container {
+/* 
+https://element-plus.org/en-US/guide/installation.html
+
+1. vue add element: fully - no - ru-RU
+
+*/
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 0px;
   background-color: #eee;
+  color: #2c3e50;
 }
 </style>
