@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <dialog-table-parent />
     <!-- <elselect-parent /> -->
-    <eltable-parent />
+    <!-- <eltable-parent /> -->
     <!-- <input-parent /> -->
   </div>
 </template>
@@ -9,12 +10,14 @@
 <script>
 /* eslint-disable */
 // CHILD-PARENT
+import dialogTableParent from "@/childParent/dialogTableParent"
 import elselectParent from "@/childParent/elselectParent"
 import eltableParent from "@/childParent/eltableParent"
 import inputParent from "@/childParent/inputParent"
 export default {
   name: "app",
   components: {
+    dialogTableParent,
     elselectParent,
     eltableParent,
     inputParent,
