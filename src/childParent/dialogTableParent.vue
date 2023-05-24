@@ -13,13 +13,17 @@
             size="small"
             @click="handleEdit(scope.$index, scope.row)"
           >
-            Edit
+            <i class="el-icon-edit" />
           </el-button>
           <el-button type="danger" size="small">Delete</el-button>
         </template>
       </el-table-column>
     </el-table>
-    <dialog-table-child :visible.sync="isModalOpen" :data.sync="tempData" />
+    <dialog-table-child
+      :open.sync="isModalOpen"
+      :data.sync="tempData"
+      @saveData="saveData"
+    />
   </div>
 </template>
 <script>
@@ -31,17 +35,17 @@ export default {
       list: [
         {
           date: "2016-05-03",
-          name: "Tom",
+          name: "Alex",
           address: "No. 189, Grove St, Los Angeles",
         },
         {
           date: "2016-05-02",
-          name: "Tom",
+          name: "Bob",
           address: "No. 189, Grove St, Los Angeles",
         },
         {
           date: "2016-05-04",
-          name: "Tom",
+          name: "Piter",
           address: "No. 189, Grove St, Los Angeles",
         },
         {
@@ -51,14 +55,21 @@ export default {
         },
       ],
       isModalOpen: false,
-      tempData: {},
+      tempData: {
+        name: "",
+      },
+      activeRow: {},
     }
   },
   methods: {
     handleEdit(idx, row) {
+      this.activeRow = row
       Object.assign(this.tempData, row)
       this.isModalOpen = true
       console.log("handleEdit", idx, row)
+    },
+    saveData() {
+      Object.assign(this.activeRow, this.tempData)
     },
   },
 }
