@@ -1,9 +1,13 @@
 <template>
   <div id="app">
-    <dialog-table-parent />
+    <!-- <dialog-table-parent /> -->
     <!-- <elselect-parent /> -->
-    <!-- <eltable-parent /> -->
     <!-- <input-parent /> -->
+
+    <div class="EL-TABLE">
+      <!-- <eltable-parent /> -->
+      <server-data-parent />
+    </div>
   </div>
 </template>
 
@@ -12,15 +16,19 @@
 // CHILD-PARENT
 import dialogTableParent from "@/childParent/dialogTableParent"
 import elselectParent from "@/childParent/elselectParent"
-import eltableParent from "@/childParent/eltableParent"
 import inputParent from "@/childParent/inputParent"
+
+import eltableParent from "@/el-table/eltableParent"
+import serverDataParent from "@/el-table/serverDataParent"
 export default {
   name: "app",
   components: {
     dialogTableParent,
     elselectParent,
-    eltableParent,
     inputParent,
+
+    eltableParent,
+    serverDataParent,
   },
 }
 </script>

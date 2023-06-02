@@ -23,7 +23,7 @@
 </template>
 <script>
 /* eslint-disable */
-import eltableChild from "@/childParent/eltableChild"
+import eltableChild from "@/el-table/eltableChild"
 export default {
   components: {
     eltableChild,
