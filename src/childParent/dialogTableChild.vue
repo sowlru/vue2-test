@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     saveData() {
-      console.log("saveData")
+      console.log("2. c saveData formData:", this.formData.name)
       this.$emit("update:data", this.formData)
       this.$emit("update:open", false)
       this.$emit("saveData")

@@ -17,7 +17,14 @@
 <script>
 /* eslint-disable */
 export default {
-  props: { value: { type: Array, default: "" } },
+  props: {
+    value: {
+      type: Array,
+      default: () => {
+        return []
+      },
+    },
+  },
   data() {
     return {
       serverData: [

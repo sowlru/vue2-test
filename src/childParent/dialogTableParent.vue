@@ -66,10 +66,11 @@ export default {
       this.activeRow = row
       Object.assign(this.tempData, row)
       this.isModalOpen = true
-      console.log("handleEdit", idx, row)
+      console.log("1. p handleEdit tempData:", this.tempData.name)
     },
     saveData() {
       Object.assign(this.activeRow, this.tempData)
+      console.log("3. p saveData tempData:", this.tempData.name)
     },
   },
 }
